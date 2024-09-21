@@ -1,4 +1,4 @@
-// src/models/projectModel.js
+
 
 const mongoose = require("mongoose");
 
