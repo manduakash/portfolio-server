@@ -9,10 +9,10 @@ const cors = require('cors');
 app.use(cors());
 
 // Middleware to parse JSON bodies
-app.use(express.json());
+app.use(express.json({ limit: "30mb" }));
 
 // Middleware to parse x-www-form-urlencoded data
-app.use(express.urlencoded({ extended: true }));
+app.use(express.urlencoded({ limit: "30mb", extended: true }));
 
 // Import routes
 const projectRoutes = require('./src/routes/project');
