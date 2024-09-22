@@ -16,6 +16,7 @@ app.use(express.urlencoded({ limit: "30mb", extended: true }));
 
 // Import routes
 const projectRoutes = require('./src/routes/project');
+const skillRoutes = require('./src/routes/skill');
 
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
@@ -29,6 +30,7 @@ mongoose.connect(process.env.MONGODB_URI, {
 
 // Use routes
 app.use('/api/project/', projectRoutes);
+app.use('/api/skill/', skillRoutes);
 
 // Define a route
 app.get('/', (req, res) => {
